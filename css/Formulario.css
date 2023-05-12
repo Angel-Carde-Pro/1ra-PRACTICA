@@ -1,0 +1,83 @@
+:root {
+    --oscuro: #212121;
+    --primario: #ff9100;
+    --secundario: #0097A7;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -4rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.formulario legend {
+    text-align: center;
+    color: var(--primario);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.switch {
+    height: 5rem;
+    width: 100%;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 15rem;
+}
+
+.input-txt {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--oscuro);
+}
+
+.buttons-Forms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 1rem;
+    margin: 2rem auto 2rem auto;
+}
+
+.boton-forms {
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+.boton-borrar {
+    background-color: var(--terciario);
+}
+
+.boton-Enviar {
+    background-color: var(--oscuro);
+}
+
+.boton-forms:hover {
+    cursor: pointer;
+}

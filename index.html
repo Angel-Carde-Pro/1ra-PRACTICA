@@ -1,0 +1,68 @@
+<!--* PAGINAS WEB USADAS-->
+<!--* https://tablericons.com/-->
+<!--* https://heroicons.com/-->
+<!--* https://heroicons.com/-->
+<!--* https://fontawesome.com/-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--*Para que se muestren ascentos, la Ñ-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Dev Web</title>
+    <!--* SEO-->
+
+    <!--* Las librerias deben ir priemero -->
+    <link rel="preload" href="CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="CSS/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--*Para una carga mas rapida-->
+    <link rel="preload" href="CSS/styles.css" as="style">
+    <!--* rel significa que relacion tiene con la hoja de estilos que se esta agregando-->
+    <link href="CSS/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">PRACTICAS DESARROLLO WEB
+            <span>M4A</span>
+        </h1>
+    </header>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <!--* Para que salga la mano osea para que habra un enlace va el href="#"-->
+            <a href="index.html">Inicio</a>
+            <a href="Formulario.html">Ultimo Ejercicio</a>
+            <a href="tarea2.html">Acerca de</a>
+            <a href="#">Contacto</a>
+            <a href="#">Portafolio</a>
+        </nav>
+    </div>
+
+    <!--* Si el primer elemento hijo es un heading (h1, h2) es obligado usar el section pero si el contenido es el principal entonces va el main -->
+
+    <section class="hero">
+        <!--//* Para crear mas rapido el div: div.contenid.xd-->
+        <div class="contenido-hero">
+            <h2>Pagina Web Steve</h2>
+            <a class="boton" href="#">Mas Información</a>
+        </div>
+    </section>
+
+    <main class="contenedor sombra">
+        <h2>Ejercicio hechos 👇</h2>
+    </main>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados</p>
+    </footer>
+</body>
+
+
+</html>

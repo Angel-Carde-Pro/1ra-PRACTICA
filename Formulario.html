@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--*Para que se muestren ascentos, la Ñ-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <!--* SEO-->
+
+    <!--* Las librerias deben ir priemero -->
+    <link rel="preload" href="CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="CSS/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--*Para una carga mas rapida-->
+    <link rel="preload" href="CSS/styles.css" as="style">
+    <!--* rel significa que relacion tiene con la hoja de estilos que se esta agregando-->
+    <link href="CSS/styles.css" rel="stylesheet">
+    <link href="CSS/Formulario.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo">PRACTICAS DESARROLLO WEB
+            <!--Nota: No es recomendado usar id.
+            Uso del id="nombre" y pa usarlo en css #nombre-->
+            <span>M4A</span>
+        </h1>
+    </header>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <!--* Para que salga la mano osea para que habra un enlace va el href="#"-->
+            <a href="index.html">Inicio</a>
+            <a href="Formulario.html">Ultimo Ejercicio</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+
+    <main class="contenedor">
+        <h2>Ejercicio realizar el siguiente diseño de un formulario</h2>
+        <div class="titulo">
+            <picture>
+                <img loading="lazy" src="img/Formulario.png" alt="Imagen Ejercicio">
+            </picture>
+        </div>
+
+
+        <h2>REGISTRO DE VISITA</h2>
+
+        <form id="form1" class="formulario">
+            <fieldset>
+                <legend>1. Datos Informativos:</legend>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Fecha:</label>
+                        <input class="input-txt" type="date" id="fecha">
+                    </div>
+
+                    <div class="campo">
+                        <label>Tutor Empresarial</label>
+                        <input class="input-txt" type="text" placeholder="Ingrese el nombre del tutor empresarial"
+                            id="tutorE">
+                    </div>
+
+                    <div class="campo">
+                        <label>Tutor Especifico</label>
+                        <input class="input-txt" type="text" placeholder="Ingrese el nombre del tutor especifico"
+                            id="tutorEs">
+                    </div>
+
+                    <div class="campo">
+                        <label>Estudiante: </label>
+                        <input class="input-txt" type="text" placeholder="Ingrese el nombre del estudiante"
+                            id="estudiante">
+                    </div>
+
+                    <div class="campo">
+                        <label>Empresa: </label>
+                        <input class="input-txt" type="text" placeholder="Ingrese el nombre de la empresa" id="empresa">
+                    </div>
+
+                    <div class="campo">
+                        <label>Periodo:</label>
+                        <select class="switch" id="opciones">
+                            <option value="" disabled selected>-- Seleccione --</option>
+                            <option value="Abr - Ago 2023">Abr - Ago 2023</option>
+                            <option value="Dic 2023 - Abr 2023">Dic 2023 - Abr 2023</option>
+                        </select>
+                    </div>
+                </div><!--.contenedor-campos-->
+
+            </fieldset>
+            <fieldset>
+                <legend>2. Asunto</legend>
+
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Mensaje:</label>
+                        <textarea class="input-txt"></textarea>
+                    </div>
+                </div><!--.contenedor-campos-->
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Informe de visita</legend>
+                <p>Observaciones</p>
+                <div class="contenedor-campos">
+                    <div class="campo">
+
+                        <label>Dialogo tutor</label>
+                        <label>Si</label>
+                        <input name="dialogo" type="radio" value="Si" id="dialogT">
+                        <label>No</label>
+                        <input name="dialogo" type="radio" value="No" id="dialogT">
+                    </div>
+
+                    <div class="campo">
+                        <label>Diálogo Estudiante:</label>
+                        <label>Si</label>
+                        <input name="dialogoE" type="radio" value="Si" id="dialogT">
+                        <label>No</label>
+                        <input name="dialogoE" type="radio" value="No" id="dialogT">
+                    </div>
+
+                    <div class="campo">
+                        <label>Observaciones:</label>
+                        <textarea class="input-txt"></textarea>
+                    </div>
+                    <div class="buttons-Forms">
+                        <input class="boton-forms boton-borrar"  type="button" value="Borrar" onclick="borrar_formulario();">
+                        <input class="boton-forms boton-Enviar"  type="button" value="Enviar" onclick="enviar_Formulario();">
+                    </div>
+                </div><!--.contenedor-campos-->
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/Formulario.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICAS DESARROLLO WEB</title>
+</head>
+
+<body>
+    <h1>Operaciones Matemáticas</h1>
+
+    <form name="form1" method="post">
+        <input id="num1" name="num1" type="text" value="0" size="30">
+        <input id="num2" name="num2" type="text" value="0" size="30">
+        <input type="button" name="SUMAR" value="SUMAR" onClick="suma();">
+        <input type="button" name="RESTAR" value="RESTAR" onClick="resta();">
+        <input type="button" name="MULTIPLICAR" value="MULTIPLICAR" onClick="multiplicacion();">
+        <input type="button" name="DIVIDIR" value="DIVIDIR" onClick="division();">
+        <input name="outstring" type="text" value="" size="30">
+    </form>
+
+    <script>
+        function suma() {
+            let num1 = document.form1.num1.value;
+            let num2 = document.form1.num2.value;
+
+            let resultado = parseInt(num1) + parseInt(num2);
+            document.form1.outstring.value = "El resultado es: " + resultado;
+        }
+
+        function resta() {
+            let num1 = document.form1.num1.value;
+            let num2 = document.form1.num2.value;
+            let resultado = parseInt(num1) - parseInt(num2);
+            document.form1.outstring.value = "El resultado es: " + resultado;
+        }
+
+        function multiplicacion() {
+            let num1 = document.form1.num1.value;
+            let num2 = document.form1.num2.value;
+            let resultado = parseInt(num1) * parseInt(num2);
+            document.form1.outstring.value = "El resultado es: " + resultado;
+        }
+
+        function division() {
+            let num1 = document.form1.num1.value;
+            let num2 = document.form1.num2.value;
+            let resultado = parseInt(num1) / parseInt(num2);
+            document.form1.outstring.value = "El resultado es: " + resultado;
+        }
+    </script>
+</body>
+
+</html>
