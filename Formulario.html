@@ -88,7 +88,7 @@
 
                     <div class="campo">
                         <label>Periodo:</label>
-                        <select class="switch" id="opciones">
+                        <select class="switch" id="periodo">
                             <option value="" disabled selected>-- Seleccione --</option>
                             <option value="Abr - Ago 2023">Abr - Ago 2023</option>
                             <option value="Dic 2023 - Abr 2023">Dic 2023 - Abr 2023</option>
@@ -103,7 +103,7 @@
                 <div class="contenedor-campos">
                     <div class="campo">
                         <label>Mensaje:</label>
-                        <textarea class="input-txt"></textarea>
+                        <textarea id="asunto" class="input-txt"></textarea>
                     </div>
                 </div><!--.contenedor-campos-->
             </fieldset>
@@ -115,27 +115,26 @@
                     <div class="campo">
 
                         <label>Dialogo tutor</label>
-                        <label>Si</label>
-                        <input name="dialogo" type="radio" value="Si" id="dialogT">
-                        <label>No</label>
-                        <input name="dialogo" type="radio" value="No" id="dialogT">
+                        <td> <label><input type="radio" name="dialogoTutor" value="si"> Sí</label>
+                            <label><input type="radio" name="dialogoTutor" value="no"> No</label><br><br>
                     </div>
 
                     <div class="campo">
                         <label>Diálogo Estudiante:</label>
-                        <label>Si</label>
-                        <input name="dialogoE" type="radio" value="Si" id="dialogT">
-                        <label>No</label>
-                        <input name="dialogoE" type="radio" value="No" id="dialogT">
+                        <label><input type="radio" name="dialogoEstudiante" value="si"> Sí</label>
+                        <label><input type="radio" name="dialogoEstudiante" value="no"> No</label><br><br>
+                        </td>
                     </div>
 
                     <div class="campo">
                         <label>Observaciones:</label>
-                        <textarea class="input-txt"></textarea>
+                        <textarea id="observaciones" class="input-txt"></textarea>
                     </div>
                     <div class="buttons-Forms">
-                        <input class="boton-forms boton-borrar"  type="button" value="Borrar" onclick="borrar_formulario();">
-                        <input class="boton-forms boton-Enviar"  type="submit" value="Enviar" onclick="enviar_Formulario();">
+                        <input class="boton-forms boton-borrar" type="button" value="Borrar"
+                            onclick="borrar_formulario();">
+                        <input class="boton-forms boton-Enviar" type="submit" value="Enviar"
+                            onclick="enviar_Formulario();">
                     </div>
                 </div><!--.contenedor-campos-->
             </fieldset>
