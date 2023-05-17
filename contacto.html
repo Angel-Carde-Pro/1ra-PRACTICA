@@ -1,13 +1,7 @@
-<!--* PAGINAS WEB USADAS-->
-<!--* https://tablericons.com/-->
-<!--* https://heroicons.com/-->
-<!--* https://heroicons.com/-->
-<!--* https://fontawesome.com/-->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
-<head>
-    <!--*Para que se muestren ascentos, la Ñ-->
+<head><!--*Para que se muestren ascentos, la Ñ-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +20,7 @@
     <link rel="preload" href="CSS/styles.css" as="style">
     <!--* rel significa que relacion tiene con la hoja de estilos que se esta agregando-->
     <link href="CSS/styles.css" rel="stylesheet">
+    <link href="CSS/Contacto.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,31 +35,48 @@
             <a href="index.html">Inicio</a>
             <a href="TablaDeDatos.html">Ultimo Ejercicio</a>
             <a href="contacto.html">Contacto</a>
-            <a href="xd.html">Portafolio</a>
+            <a href="#">Portafolio</a>
         </nav>
     </div>
-
-    <!--* Si el primer elemento hijo es un heading (h1, h2) es obligado usar el section pero si el contenido es el principal entonces va el main -->
-
-    <section class="hero">
+    
+    <section class="background-contact">
         <!--//* Para crear mas rapido el div: div.contenid.xd-->
-        <div class="contenido-hero">
-            <h2>Pagina Web Steve</h2>
-            <p>Estas son las prácticas realizadas en las clases de Desarrollo de Aplicaciones Web.</p>
-            <p>En la carrera de desarrollo de software.</p>
-            <a class="boton" href="#">Mas Información</a>
+        <div class="colorfade_contact">
+            <h1>Contacto</h1>
+            <p>Si tienes alguna pregunta o deseas ponerte en contacto conmigo</p>
+            <p>Puedes hacerlo a través de los siguientes medios de comunicación:</p>
         </div>
+        
     </section>
+    
+    <main class="contenedor">
+        <h2>Formulario de contacto</h2>
 
-    <main class="contenedor sombra">
-        
-        <h2>Ejercicio hechos 👇</h2>
-        
+        <div class="form_contact_bg"></div>
+
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre</label>
+                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre">
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="email">E-mail</label>
+                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email">
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje</label>
+                <textarea class="campo__field campo__field--textarea" id="mensaje"></textarea>
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Enviar" class="boton boton--primario">
+            </div>
+        </form>
+
+
     </main>
 
-    <footer class="footer">
-        <p>Todos los derechos reservados</p>
-    </footer>
+    <script src="js/modernizr.js"></script>
 </body>
 
 </html>

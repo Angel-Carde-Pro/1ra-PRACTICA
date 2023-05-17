@@ -25,7 +25,6 @@
 </head>
 
 <body>
-
     <header>
         <h1 class="titulo">PRACTICAS DESARROLLO WEB
             <!--Nota: No es recomendado usar id.
@@ -44,7 +43,7 @@
     </div>
 
     <main class="contenedor">
-        <h2>Ejercicio realizar el siguiente diseño de un formulario</h2>
+        <h2>Ejercicio realizar un diseño de una tabla</h2>
         <div class="titulo">
             <picture>
                 <img loading="lazy" src="img/Formulario.png" alt="Imagen Ejercicio">
@@ -60,35 +59,35 @@
                 <div class="contenedor-campos">
                     <div class="campo">
                         <label>Fecha:</label>
-                        <input class="input-txt" type="date" id="fecha">
+                        <input class="input-txt" type="date" id="fecha" required>
                     </div>
 
                     <div class="campo">
                         <label>Tutor Empresarial</label>
-                        <input class="input-txt" type="text" placeholder="Ingrese el nombre del tutor empresarial"
+                        <input required class="input-txt" type="text" placeholder="Ingrese el nombre del tutor empresarial"
                             id="tutorE">
                     </div>
 
                     <div class="campo">
                         <label>Tutor Especifico</label>
-                        <input class="input-txt" type="text" placeholder="Ingrese el nombre del tutor especifico"
+                        <input required class="input-txt" type="text" placeholder="Ingrese el nombre del tutor especifico"
                             id="tutorEs">
                     </div>
 
                     <div class="campo">
                         <label>Estudiante: </label>
-                        <input class="input-txt" type="text" placeholder="Ingrese el nombre del estudiante"
+                        <input required class="input-txt" type="text" placeholder="Ingrese el nombre del estudiante"
                             id="estudiante">
                     </div>
 
                     <div class="campo">
                         <label>Empresa: </label>
-                        <input class="input-txt" type="text" placeholder="Ingrese el nombre de la empresa" id="empresa">
+                        <input required class="input-txt" type="text" placeholder="Ingrese el nombre de la empresa" id="empresa">
                     </div>
 
                     <div class="campo">
                         <label>Periodo:</label>
-                        <select class="switch" id="periodo">
+                        <select required class="switch" id="periodo">
                             <option value="" disabled selected>-- Seleccione --</option>
                             <option value="Abr - Ago 2023">Abr - Ago 2023</option>
                             <option value="Dic 2023 - Abr 2023">Dic 2023 - Abr 2023</option>
@@ -103,7 +102,7 @@
                 <div class="contenedor-campos">
                     <div class="campo">
                         <label>Mensaje:</label>
-                        <textarea id="asunto" class="input-txt"></textarea>
+                        <textarea required id="asunto" class="input-txt"></textarea>
                     </div>
                 </div><!--.contenedor-campos-->
             </fieldset>
@@ -115,20 +114,20 @@
                     <div class="campo">
 
                         <label>Dialogo tutor</label>
-                        <td> <label><input type="radio" name="dialogoTutor" value="si"> Sí</label>
-                            <label><input type="radio" name="dialogoTutor" value="no"> No</label><br><br>
+                        <td> <label><input required type="radio" name="dialogoTutor" value="si"> Sí</label>
+                            <label><input required type="radio" name="dialogoTutor" value="no"> No</label><br><br>
                     </div>
 
                     <div class="campo">
                         <label>Diálogo Estudiante:</label>
-                        <label><input type="radio" name="dialogoEstudiante" value="si"> Sí</label>
-                        <label><input type="radio" name="dialogoEstudiante" value="no"> No</label><br><br>
+                        <label><input required type="radio" name="dialogoEstudiante" value="si"> Sí</label>
+                        <label><input required type="radio" name="dialogoEstudiante" value="no"> No</label><br><br>
                         </td>
                     </div>
 
                     <div class="campo">
                         <label>Observaciones:</label>
-                        <textarea id="observaciones" class="input-txt"></textarea>
+                        <textarea required id="observaciones" class="input-txt"></textarea>
                     </div>
                     <div class="buttons-Forms">
                         <input class="boton-forms boton-borrar" type="button" value="Borrar"

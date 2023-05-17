@@ -1,0 +1,74 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --terciario: #272095;
+    --gris: #757575;
+    --grisClaro: #e6dff3;
+}
+
+.background-contact {
+    background-image: url(../img/Header_Contact.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 54rem;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.background-contact h1,
+.background-contact p {
+    color: var(--blanco);
+}
+
+.colorfade_contact {
+    position: absolute;
+    background-color: rgba(79, 17, 157, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_contact_bg {
+    background-image: url(../img/FondoContacto.webp);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -6rem auto 6rem auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
+
+
+
+
+
+
