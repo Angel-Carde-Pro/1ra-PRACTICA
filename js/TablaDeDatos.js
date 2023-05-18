@@ -10,7 +10,7 @@ function calculateAll() {
     var rows = document.getElementsByTagName("tr");
     for (var i = 0; i < rows.length; i++) {
         if (rows[i].getElementsByTagName("td").length > 0) {
-            calculateTotal(i + 1);
+            calculateTotal(i);
         }
     }
 }
