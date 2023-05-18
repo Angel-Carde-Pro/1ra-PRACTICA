@@ -40,31 +40,47 @@
     border: 1px solid #dee2e685;
 }
 
-/* Resaltar texto
-        .table .text_open {
-            font-size: 14px;
-            font-weight: bold;
-            Letter-spacing: 0.35px;
-            color: #FF1046;
-        } */
-
 /* Note: Sirve para poner un boton de un aspecto bastante bueno*/
-/* .table tbody tr td .btn {
-            width: 130px;
-            text-decoration: none;
-            Line-height: 35px;
-            display: inline-block;
-            display: inline-block;
-            background-color: #FF1046;
-            font-weight: medium;
-            color: #FFFFFF;
-            text-align: center;
-            verticaL-aLign: middle;
-            user-select: none;
-            border: 1px solid transparent;
-            font-size: 14px;
-            opacity: 1;
-        } */
+.table tbody tr td .btn {
+    width: 130px;
+    text-decoration: none;
+    Line-height: 35px;
+    display: inline-block;
+    display: inline-block;
+    background-color: #FF1046;
+    font-weight: medium;
+    color: #FFFFFF;
+    text-align: center;
+    verticaL-aLign: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 14px;
+    transition: background-color 0.6s ease;
+}
+
+.table tbody tr td .btn:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    animation: jump 0.6s ease-in-out;
+    /* Escala el botón al 110% */
+    /* transform: scale(1.1); */
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.456);
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 
 @media (max-width: 768px) {
     .table thead {

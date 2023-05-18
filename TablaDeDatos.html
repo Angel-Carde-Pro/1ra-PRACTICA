@@ -37,6 +37,9 @@
 
     <section>
         <h2>Ejercicio realizar el siguiente diseño de una tabla</h2>
+        <h3>Cree una tabla en HTML empleando colspan / rowspan para agrupación de celdas y que permita la edicion de las
+            celdas.
+            Coloque imagenes representativas de los productos.</h3>
         <div class="titulo">
             <picture>
                 <img loading="lazy" src="img/Tabla.png" alt="Imagen Ejercicio">
@@ -45,7 +48,7 @@
     </section>
 
     <div class="table-container">
-        <h2>Cuadro Comparativo</h2>
+        <h2>Cuadro Comparativo de Ventas Diarias</h2>
         <table class="table">
             <thead>
                 <tr>
@@ -57,92 +60,127 @@
                     <th>Cantidad Facturada</th>
                     <th>Importe Unitario</th>
                     <th>Importe Total Iva Incluido</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <!-- * data-label se va a mostrar cuando la tabla se muestre para dispositivos moviles -->
-                    <td data-label="Empresa: Restaurant Doña Chonchis">1 jan 2021</td>
-                    <td data-label="Forma de pago">Credito</td>
+                    <td data-label="Empresa" rowspan="4">La Ganga</td>
+                    <td data-label="Forma de pago" rowspan="3">Credito</td>
                     <td data-label="Producto / Servicio">Cocinas de Induccion</td>
                     <td data-label="Imagenes"><img
                             src="https://www.lg.com/ec/images/cocinas/md07528464/gallery/D-01.jpg"
                             alt="cocina_electrica" style="width:150px; height:150px;"></td>
                     <td data-label="Descripcion del bien o servicio">Cocinas Electricas linea blanca de 4 quemadores
                     </td>
-                    <td data-label="Cantidad Facturada">10</td>
-                    <td data-label="Importe Unitario">300</td>
-                    <td data-label="Importe Total Iva Incluido">30000</td>
+                    <td data-label="Cantidad Facturada">
+                        Ingrese un valor<input type="text" id="cantidad-facturada-1" value="10">
+                    </td>
+                    <td data-label="Importe Unitario">
+                        Ingrese un valor<input type="text" id="importe-unitario-1" value="300">
+                    </td>
+                    <td data-label="Importe Total Iva Incluido" id="importe-total-1">30000</td>
+                    <td data-label="#">
+                        <button class="btn" onclick="calculateTotal(1)">Calcular</button>
+                    </td>
                 </tr>
                 <tr>
-                    <!-- * data-label se va a mostrar cuando la tabla se muestre para dispositivos moviles -->
-                    <td data-label="Empresa: Restaurant Doña Chonchis">1 jan 2021</td>
-                    <td data-label="Forma de pago">Credito</td>
                     <td data-label="Producto / Servicio">Refrigeradoras</td>
                     <td data-label="Imagenes"><img
                             src="https://www.artefacta.com/media/catalog/product/a/-/a-next4_lm85sxd_gr-x30gmkym_right_angle_lit_food.jpg?width=1040&height=1040&store=artefacta_storeview&image-type=image"
                             alt="refrigeradora" style="width:150px; height:150px;"></td>
                     <td data-label="Descripcion del bien o servicio">Refrigeradoras linea blanca, 2 servicios</td>
-                    <td data-label="Cantidad Facturada">8</td>
-                    <td data-label="Importe Unitario">10</td>
-                    <td data-label="Importe Total Iva Incluido">100</td>
+                    
+                    <td data-label="Cantidad Facturada">
+                        Ingrese un valor<input type="text" id="cantidad-facturada-2" value="10">
+                    </td>
+                    <td data-label="Importe Unitario">
+                        Ingrese un valor<input type="text" id="importe-unitario-2" value="300">
+                    </td>
+                    <td data-label="Importe Total Iva Incluido" id="importe-total-2">30000</td>
+                    <td data-label="#">
+                        <button class="btn" onclick="calculateTotal(2)">Calcular</button>
+                    </td>
                 </tr>
                 <tr>
-                    <td data-label="Empresa: Restaurant Doña Chonchis">1 jan 2021</td>
-                    <td data-label="Forma de pago">Credito</td>
                     <td data-label="Producto / Servicio">Licuadoras</td>
                     <td data-label="Imagenes"><img
                             src="https://www.umcoecuador.com/8304-large_default/licuadora-pulse-mix.jpg" alt="licuadora"
                             style="width:150px; height:150px;"></td>
                     <td data-label="Descripcion del bien o servicio">Licuadora de 4 velocidades, marca Mabe</td>
-                    <td data-label="Cantidad Facturada">15</td>
-                    <td data-label="Importe Unitario">20</td>
-                    <td data-label="Importe Total Iva Incluido">5000</td>
+
+                    <td data-label="Cantidad Facturada">
+                        Ingrese un valor<input type="text" id="cantidad-facturada-3" value="10">
+                    </td>
+                    <td data-label="Importe Unitario">
+                        Ingrese un valor<input type="text" id="importe-unitario-3" value="300">
+                    </td>
+                    <td data-label="Importe Total Iva Incluido" id="importe-total-3">30000</td>
+                    <td data-label="#">
+                        <button class="btn" onclick="calculateTotal(3)">Calcular</button>
+                    </td>
                 </tr>
                 <tr>
-                    <td data-label="Empresa: Restaurant Doña Chonchis">1 jan 2021</td>
-                    <td data-label="Forma de pago">Efectivo</td>
+                    <td data-label="Forma de pago" rowspan="3">Efectivo</td>
                     <td data-label="Producto / Servicio">Mesas de Servicio</td>
                     <td data-label="Imagenes"><img
-                            src="https://th.bing.com/th/id/OIP.4fhmIhd9YYk54-x1k-cV6AHaE8?pid=ImgDet&rs=1"
-                            alt="mesa" style="width:150px; height:150px;"></td>
+                            src="https://th.bing.com/th/id/OIP.4fhmIhd9YYk54-x1k-cV6AHaE8?pid=ImgDet&rs=1" alt="mesa"
+                            style="width:150px; height:150px;"></td>
                     <td data-label="Descripcion del bien o servicio">Mesa de servicio para coniesindustriales
                     </td>
-                    <td data-label="Cantidad Facturada">10</td>
-                    <td data-label="Importe Unitario">300</td>
-                    <td data-label="Importe Total Iva Incluido">30000</td>
+
+                    <td data-label="Cantidad Facturada">
+                        Ingrese un valor<input type="text" id="cantidad-facturada-4" value="10">
+                    </td>
+                    <td data-label="Importe Unitario">
+                        Ingrese un valor<input type="text" id="importe-unitario-4" value="300">
+                    </td>
+                    <td data-label="Importe Total Iva Incluido" id="importe-total-4">30000</td>
+                    <td data-label="#">
+                        <button class="btn" onclick="calculateTotal(4)">Calcular</button>
+                    </td>
                 </tr>
                 <tr>
-                    <!-- * data-label se va a mostrar cuando la tabla se muestre para dispositivos moviles -->
-                    <td data-label="Empresa: Restaurant Doña Chonchis">1 jan 2021</td>
-                    <td data-label="Forma de pago">Efectivo</td>
+                    <td data-label="Empresa:" rowspan="3">Artefacta</td>
                     <td data-label="Producto / Servicio">Congeladores</td>
                     <td data-label="Imagenes"><img
-                            src="https://th.bing.com/th/id/R.93fef52e6e84bc96fb9bdd0676777e7e?rik=QayQBVslTGCtOQ&riu=http%3a%2f%2ftusimagenesde.com%2fwp-content%2fuploads%2f2016%2f05%2fcongeladores-5.jpg&ehk=%2fzcYHh5C7byZOdxiLMcq9%2fG5bdzWly3w8XrvV53XYc4%3d&risl=&pid=ImgRaw&r=0"
+                            src="https://th.bing.com/th/id/R.3b9ebb4d2ee82da98c2bbc0f0b575951?rik=IoZr0J7hXF%2fpUA&pid=ImgRaw&r=0"
                             alt="congeladores" style="width:150px; height:150px;"></td>
                     <td data-label="Descripcion del bien o servicio">Congelador blanco pequeño ideal para negocios
                     </td>
-                    <td data-label="Cantidad Facturada">10</td>
-                    <td data-label="Importe Unitario">300</td>
-                    <td data-label="Importe Total Iva Incluido">30000</td>
+
+                    <td data-label="Cantidad Facturada">
+                        Ingrese un valor<input type="text" id="cantidad-facturada-5" value="10">
+                    </td>
+                    <td data-label="Importe Unitario">
+                        Ingrese un valor<input type="text" id="importe-unitario-5" value="300">
+                    </td>
+                    <td data-label="Importe Total Iva Incluido" id="importe-total-5">30000</td>
+                    <td data-label="#">
+                        <button class="btn" onclick="calculateTotal(5)">Calcular</button>
+                    </td>
                 </tr>
                 <tr>
-                    <!-- * data-label se va a mostrar cuando la tabla se muestre para dispositivos moviles -->
-                    <td data-label="Empresa: Restaurant Doña Chonchis">1 jan 2021</td>
-                    <td data-label="Forma de pago">Efectivo</td>
                     <td data-label="Producto / Servicio">Cocinas Industriales</td>
                     <td data-label="Imagenes"><img
                             src="https://th.bing.com/th/id/R.f5111cad99f596751e47ffb57f91bab0?rik=XWVYFs7m3GFMJA&pid=ImgRaw&r=0"
                             alt="cocinas industiales" style="width:150px; height:150px;"></td>
                     <td data-label="Descripcion del bien o servicio">Cocinas industiales ideal para negocios
                     </td>
-                    <td data-label="Cantidad Facturada">10</td>
-                    <td data-label="Importe Unitario">300</td>
-                    <td data-label="Importe Total Iva Incluido">30000</td>
+
+                    <td data-label="Cantidad Facturada">
+                        Ingrese un valor<input type="text" id="cantidad-facturada-6" value="10">
+                    </td>
+                    <td data-label="Importe Unitario">
+                        Ingrese un valor<input type="text" id="importe-unitario-6" value="300">
+                    </td>
+                    <td data-label="Importe Total Iva Incluido" id="importe-total-6">30000</td>
+                    <td data-label="#">
+                        <button class="btn" onclick="calculateTotal(6)">Calcular</button>
+                    </td>
                 </tr>
                 <tr>
-                    <!-- * data-label se va a mostrar cuando la tabla se muestre para dispositivos moviles -->
-                    <td data-label="Empresa: Restaurant Doña Chonchis">1 jan 2021</td>
                     <td data-label="Forma de pago">Credito</td>
                     <td data-label="Producto / Servicio">Cocinas de induccion</td>
                     <td data-label="Imagenes"><img
@@ -150,11 +188,28 @@
                             alt="cocinas induccion" style="width:150px; height:150px;"></td>
                     <td data-label="Descripcion del bien o servicio">Cocinas induccion ideal para negocios
                     </td>
-                    <td data-label="Cantidad Facturada">10</td>
-                    <td data-label="Importe Unitario">300</td>
-                    <td data-label="Importe Total Iva Incluido">30000</td>
+
+                    <td data-label="Cantidad Facturada">
+                        Ingrese un valor<input type="text" id="cantidad-facturada-7" value="10">
+                    </td>
+                    <td data-label="Importe Unitario">
+                        Ingrese un valor<input type="text" id="importe-unitario-7" value="300">
+                    </td>
+                    <td data-label="Importe Total Iva Incluido" id="importe-total-7">30000</td>
+                    <td data-label="#">
+                        <button class="btn" onclick="calculateTotal(7)">Calcular</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="9"><button class="btn" onclick="calculateAll()">Calcular Todos</button></td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    <footer class="footer">
+        <p>¡Página web de las prácticas desarrolladas en clases de Desarrollo de Aplicaciones Web!</p>
+    </footer>
+
+    <script src="js/TablaDeDatos.js"></script>
 </body>
